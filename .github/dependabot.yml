@@ -3,4 +3,4 @@ updates:
   - package-ecosystem: "docker"
     directory: "/webapp" 
     schedule:
-      interval: "weekly" 
+      interval: "daily" 
