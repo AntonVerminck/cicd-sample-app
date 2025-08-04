@@ -25,12 +25,18 @@ jobs:
         run: yarn install
         working-directory: webapp
 
-      
+
       - name: Lint code
         run: yarn lint
         working-directory: webapp
         env:
           ESLINT_USE_FLAT_CONFIG: false
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       
       - name: Build Docker image
@@ -38,5 +44,5 @@ jobs:
         with:
           context: .
           file: ./webapp/Dockerfile
-          push: false
-          tags: antonverminck/webapp:latest
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest
