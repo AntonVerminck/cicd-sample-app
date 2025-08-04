@@ -23,6 +23,7 @@ jobs:
      
       - name: Install dependencies
         run: yarn install
+        working-directory: webapp
 
       
       - name: Lint code
