@@ -46,3 +46,8 @@ jobs:
           file: webapp/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_NAME }}/webapp:latest
+
+          
+      - name: Run tests
+        run: yarn test 
+        working-directory: webapp
