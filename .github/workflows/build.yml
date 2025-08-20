@@ -31,6 +31,10 @@ jobs:
         working-directory: webapp
         env:
           ESLINT_USE_FLAT_CONFIG: false
+             
+      - name: Run tests
+        run: yarn test 
+        working-directory: webapp
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
@@ -47,7 +51,4 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_NAME }}/webapp:latest
 
-          
-      - name: Run tests
-        run: yarn test 
-        working-directory: webapp
+   
