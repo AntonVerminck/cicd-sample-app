@@ -1,4 +1,4 @@
-# Dockerlab sample application
+# Dockerlab sample application CICD
 
 This is a sample application for the Dockerlab of the Machine Learning Operations course.
 
@@ -31,3 +31,4 @@ Run the tests:
 ```console
 yarn test
 ```
+
