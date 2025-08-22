@@ -22,7 +22,7 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "chai": "^5.1.1",
+    "chai": "^6.0.1",
     "eslint": "^9.8.0",
     "mocha": "5.0.0",
     "node-fetch": "^3.3.2"
