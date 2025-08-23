@@ -34,7 +34,7 @@ jobs:
           
       - name: Start app
         run: 
-          yarn start
+          yarn start &
         working-directory: webapp
              
       - name: Run tests
